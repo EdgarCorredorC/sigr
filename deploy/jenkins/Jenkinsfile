@@ -1,0 +1,9 @@
+// Opcional: integración continua futura
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') { steps { checkout scm } }
+    stage('Build')    { steps { echo 'Compilar backend y frontend' } }
+    stage('Test')     { steps { echo 'Ejecutar pruebas' } }
+  }
+}
